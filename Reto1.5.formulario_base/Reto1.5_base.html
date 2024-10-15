@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba de HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="file"], button, input[type="reset"] {
+            width: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: #e53935;
+        }
+        progress {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de prueba de HTML5</h1>
+    
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos de envío</legend>
+            
+            <!-- Nombre -->
+            <label for="nombre" title="Ingrese su nombre completo">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus pattern="[a-zA-Z\s]{3,50}" title="Debe tener entre 3 y 50 caracteres alfabéticos (solo letras y espacios)">
+            
+            <!-- Correo Electrónico -->
+            <label for="email" title="Ingrese su correo electrónico">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required title="Ingrese un correo electrónico válido">
+            
+            <!-- Página Web Personal (opcional) -->
+            <label for="website" title="Ingrese la URL de su página personal (opcional)">Página web personal:</label>
+            <input type="url" id="website" name="website" placeholder="Escribe la URL de tu página web personal">
+            
+            <!-- Fecha -->
+            <label for="fecha" title="Seleccione una fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            
+            <!-- Teléfono -->
+            <label for="telefono" title="Ingrese su número de teléfono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="(\+?\d{1,3})?\d{7,15}" title="El número debe tener entre 7 y 15 dígitos, con o sin prefijo internacional (+)">
+            
+            <!-- Código Postal -->
+            <label for="codigo_postal" title="Ingrese su código postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" required pattern="\d{5}" title="Debe ingresar un código postal de 5 dígitos">
+            
+            <!-- Número entre -10 y 10 -->
+            <label for="numero" title="Ingrese un número entre -10 y 10">Número (entre -10 y 10):</label>
+            <input type="number" id="numero" name="numero" min="-10" max="10">
+            
+            <!-- Término de búsqueda -->
+            <label for="busqueda" title="Ingrese un término de búsqueda">Término de búsqueda:</label>
+            <input type="search" id="busqueda" name="busqueda">
+            
+            <!-- Color favorito -->
+            <label for="color" title="Seleccione su color favorito">Color favorito:</label>
+            <input type="color" id="color" name="color">
+            
+            <!-- Texto adicional -->
+            <label for="texto_adicional" title="Ingrese un texto adicional (máximo 100 caracteres)">Textarea:</label>
+            <textarea id="texto_adicional" name="texto_adicional" maxlength="100" required>Este es el valor del texto por defecto</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Opciones adicionales</legend>
+            
+            <!-- Select Múltiple -->
+            <label for="opciones" title="Seleccione una o más opciones">Seleccione opciones:</label>
+            <select id="opciones" name="opciones[]" multiple>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+                <option value="opcion4">Opción 4</option>
+                <option value="opcion5">Opción 5</option>
+            </select>
+            
+            <!-- Subir Fotos -->
+            <label for="fotos" title="Seleccione fotos en formato JPEG">Subir fotos (JPEG):</label>
+            <input type="file" id="fotos" name="fotos[]" accept="image/jpeg" multiple>
+            
+            <!-- Barra de progreso -->
+            <label for="progreso" title="Progreso actual">Progreso:</label>
+            <progress id="progreso" value="50" max="100"></progress>
+        </fieldset>
+
+        <!-- Botones de acción -->
+        <input type="reset" value="Restablecer">
+        <button type="submit">Enviar</button>
+        
+    </form>
+
+</body>
+</html>
