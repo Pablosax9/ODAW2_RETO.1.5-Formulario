@@ -1,6 +1,6 @@
 # Reto 1.5: Formulario
 Nombre y Apellidos: Pablo Rodríguez Crespo
-URL del repositorio de gitlab:
+URL del repositorio de gitlab: https://github.com/Pablosax9/ODAW2_RETO.1.5-Formulario.git
 ## Instrucciones:
 Crea una página web que contenga un formulario con los siguientes campos de información, conservando los datos del fichero Reto1.5_base.html:
 
